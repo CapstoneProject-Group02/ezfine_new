@@ -5,6 +5,7 @@ import { useLanguage } from "../TraslateBtn/LanguageContext";
 import englishContent from "../Json/Driver Payment/DPE.json";
 import sinhalaContent from "../Json/Driver Payment/DPS.json";
 import tamilContent from "../Json/Driver Payment/DPT.json";
+import HomeButton from "../homeButton";
 
 const DriverPayment = () => {
   const { selectedLanguage } = useLanguage();
@@ -133,6 +134,7 @@ const DriverPayment = () => {
           </form>
         </div>
       </div>
+      <HomeButton></HomeButton>
     </div>
   );
 };
