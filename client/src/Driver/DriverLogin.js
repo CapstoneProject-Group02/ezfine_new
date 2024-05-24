@@ -9,7 +9,6 @@ import sinhalaContent from "../Json/Driver Login/DLS.json";
 import tamilContent from "../Json/Driver Login/DLT.json";
 import { toast, Toaster } from "react-hot-toast";
 import GoogleLoginDriver from "../FireBase/GoogleLoginDriver";
-import GoogleLoginOfficer from "../FireBase/GoogleLoginOfficer";
 
 function DriverLogin() {
   const { selectedLanguage } = useLanguage();
@@ -36,7 +35,7 @@ function DriverLogin() {
     e.preventDefault();
     if (!username || !password) {
       // setLoginStatus("Username and password are required");
-      toast.success("Username and password are required");
+      toast.error("Username and password are required");
       return;
     }
     Axios.post("http://localhost:3008/login", {
@@ -53,13 +52,13 @@ function DriverLogin() {
           }, 100);
         } else {
           // setLoginStatus(response.data.message || "Unknown error occurred");
-          toast.success(response.data.message || "Unknown error occurred");
+          toast.error(response.data.message || "Unknown error occurred");
         }
       })
       .catch((error) => {
         console.error("Error logging in:", error);
         // setLoginStatus("Error logging in. Please try again later.");
-        toast.success("Error logging in. Please try again later.");
+        toast.error("Error logging in. Please try again later.");
       });
   };
 
@@ -104,16 +103,6 @@ function DriverLogin() {
             <Link to="/googlelogindriver">
               <button className="button1"> {content.Google}</button>
             </Link>
-            <h1
-            // style={{
-            //   color: "red",
-            //   fontSize: "15px",
-            //   textAlign: "center",
-            //   marginTop: "60px",
-            // }}
-            >
-              {/* {loginStatus} */}
-            </h1>
 
             <div className="newMember">{content.NewMemberMessage}</div>
 
