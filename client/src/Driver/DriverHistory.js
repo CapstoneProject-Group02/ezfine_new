@@ -5,6 +5,7 @@ import { useLanguage } from "../TraslateBtn/LanguageContext";
 import englishContent from "../Json/Driver History Interface/DHIE.json";
 import sinhalaContent from "../Json/Driver History Interface/DHIS.json";
 import tamilContent from "../Json/Driver History Interface/DHIT.json";
+import HomeButton from "../homeButton";
 
 const DriverHistory = () => {
   const { selectedLanguage } = useLanguage();
@@ -180,6 +181,7 @@ const DriverHistory = () => {
           </>
         )}
       </div>
+      <HomeButton></HomeButton>
     </div>
   );
 };

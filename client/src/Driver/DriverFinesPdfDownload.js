@@ -4,6 +4,7 @@ import { useLanguage } from "../TraslateBtn/LanguageContext";
 import englishContent from "../Json/Driver Download Pdf/DDPE.json";
 import sinhalaContent from "../Json/Driver Download Pdf/DDPS.json";
 import tamilContent from "../Json/Driver Download Pdf/DDPT.json";
+import HomeButton from "../homeButton";
 
 function DriverFinesPdfDownload() {
   const { selectedLanguage } = useLanguage();
@@ -36,6 +37,7 @@ function DriverFinesPdfDownload() {
           <button onClick={handleDownload}>Download PDF</button>
         </header>
       </div>
+      <HomeButton></HomeButton>
     </div>
   );
 }

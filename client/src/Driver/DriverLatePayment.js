@@ -6,6 +6,7 @@ import englishContent from "../Json/Driver Late Payment/DLPE.json";
 import sinhalaContent from "../Json/Driver Late Payment/DLPS.json";
 import tamilContent from "../Json/Driver Late Payment/DLPT.json";
 import { Link } from "react-router-dom";
+import HomeButton from "../homeButton";
 
 const DriverLatePayment = () => {
   const { selectedLanguage } = useLanguage();
@@ -127,6 +128,7 @@ const DriverLatePayment = () => {
           </Link>
         </div>
       </div>
+      <HomeButton></HomeButton>
     </div>
   );
 };
