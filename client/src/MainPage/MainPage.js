@@ -58,6 +58,7 @@ const MainPage = () => {
               </Link>
             </div>
             <ChatBot></ChatBot>
+            {/* All button removed */}
           </div>
         </div>
       </div>
